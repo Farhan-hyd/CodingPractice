@@ -1,5 +1,3 @@
-package collectionframwrk;
-
 import java.util.Scanner;
 
 public class tree {

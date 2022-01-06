@@ -1,11 +1,10 @@
-package collectionframwrk.linkedlist;
+package linkedlist;
 
 import java.util.*;
 
 public class ll {
 
     public static void main(String[] args) throws Exception {
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         LinkedList<Integer> ls =new LinkedList<>();
         myll<Integer> myLL = new myll<>();
 

@@ -1,4 +1,4 @@
-package collectionframwrk.linkedlist;
+package linkedlist;
 
 public class myll<E> {
     
