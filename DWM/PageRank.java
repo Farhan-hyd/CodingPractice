@@ -1,5 +1,3 @@
-package DWM;
-
 import java.util.Scanner;
 
 public class PageRank {
