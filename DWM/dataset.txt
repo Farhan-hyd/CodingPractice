@@ -1,0 +1,16 @@
+1,High,True,True,False,P
+2,very high,False,False,False,N 
+3,Very high,True,False,True,P
+4,Normal,True,True,True,P
+5,Normal,False,False,True,N 
+6,High,True,False,False,P
+7,High,True,False,True,P
+8,very high,True,True,False,P
+9,High,False,True,True,P
+10,Normal,True,False,False,N
+11,Normal,True,False,True,P 
+12,Normal,False,True,True,P
+13,High,False,False,False,N
+14,Very high,False,True,False,P 
+15,Very high,False,True,False,P
+16,High,False,False,True,P
