@@ -1,7 +1,7 @@
 public class fandlocc {
 
     public static void main(String[] args) {
-        int a[] = { 1, 2, 3, 8, 8, 8, 9, 10, 11 };
+        int[] a = { 1, 2, 3, 8, 8, 8, 9, 10, 11 };
         int n = a.length;
 
         System.out.println(firstocc(a, n, 8));
@@ -9,7 +9,7 @@ public class fandlocc {
 
     }
 
-    public static int firstocc(int a[], int n, int key) {
+    public static int firstocc(int[] a, int n, int key) {
         int s = 0;
         int e = n - 1;
 
@@ -29,7 +29,7 @@ public class fandlocc {
         return ans;
     }
 
-    public static int lasttocc(int a[], int n, int key) {
+    public static int lasttocc(int[] a, int n, int key) {
         int s = 0;
         int e = n - 1;
 

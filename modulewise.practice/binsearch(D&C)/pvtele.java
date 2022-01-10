@@ -50,7 +50,7 @@ public class pvtele {
         FastReader sc = new FastReader();
 
         int n = sc.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
 
         for (int i = 0; i < a.length; i++) {
             a[i] = sc.nextInt();
@@ -59,7 +59,7 @@ public class pvtele {
         System.out.println(findPivot(a, 0, n - 1));
     }
 
-    public static int findPivot(int a[], int s, int e) {
+    public static int findPivot(int[] a, int s, int e) {
         if (s > e) {
             return -1;
         }

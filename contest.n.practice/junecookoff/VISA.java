@@ -72,10 +72,10 @@ public class VISA {
     }
 
     public static boolean valid(int x1,int x2) {
-        return (x2>=x1)?true:false;
+        return x2 >= x1;
     }
 
     public static boolean validZ(int x1,int x2) {
-        return (x1>=x2)?true:false;
+        return x1 >= x2;
     }
 }

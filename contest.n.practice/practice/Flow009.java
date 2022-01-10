@@ -38,7 +38,7 @@ public class Flow009 {
                 int quantity = sc.nextInt();
                 int price = sc.nextInt();
                 
-                double result = (double) (quantity * price);
+                double result = quantity * price;
                 
                 if (result > 1000){
                     result /= 10;

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class PageRank {
-  private int path[][]      = new int[10][10];
-  private double pageRank[] = new double[10];
+  private final int[][] path = new int[10][10];
+  private final double[] pageRank = new double[10];
 
   public void calc(double totalNodes) {
     int externalNodeNumber;
@@ -10,7 +10,7 @@ public class PageRank {
     double initialPageRank;
     double outgoingLinks = 0;
     double dampingFactor = 0.85;
-    double tempPageRank[] = new double[10];
+    double[] tempPageRank = new double[10];
 
     int i = 1;
     int iteration = 1;
@@ -64,7 +64,7 @@ public class PageRank {
     }
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     int nodes, i, j;
     Scanner in = new Scanner(System.in);
     System.out.print("Enter the Number of WebPages: ");

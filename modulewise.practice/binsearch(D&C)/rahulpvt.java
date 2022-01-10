@@ -60,7 +60,7 @@ public class rahulpvt {
 
     }
 
-    public static int find(int a[], int n, int key) {
+    public static int find(int[] a, int n, int key) {
         int s = 0;
         int e = n - 1;
 

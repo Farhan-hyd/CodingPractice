@@ -2,7 +2,7 @@ import java.util.*;
 
 public class samllnum{
 	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 		long num = sc.nextLong();
 		long newnum = 0;

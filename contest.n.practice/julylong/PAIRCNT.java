@@ -72,8 +72,8 @@ public class PAIRCNT {
         }
     }
 
-    public static void floydWarshall(int graph[][], int V) {
-        int dist[][] = new int[V][V];
+    public static void floydWarshall(int[][] graph, int V) {
+        int[][] dist = new int[V][V];
         int i, j, k;
 
         for (i = 0; i < V; i++)
@@ -92,7 +92,7 @@ public class PAIRCNT {
         printSolution(dist, V);
     }
 
-    public static void printSolution(int dist[][], int V) {
+    public static void printSolution(int[][] dist, int V) {
         System.out.println("The following matrix shows the shortest " + "distances between every pair of vertices");
         for (int i = 0; i < V; ++i) {
             for (int j = 0; j < V; ++j) {

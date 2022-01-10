@@ -2,7 +2,7 @@ import java.io.*;
 
 public class maxid {
 
-    static int largest(int arr[]) {
+    static int largest(int[] arr) {
         int i, ind = 0;
 
         int max = arr[0];

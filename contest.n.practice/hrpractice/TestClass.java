@@ -44,7 +44,7 @@ class TestClass {
             }
     }
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         
         FastReader fastReader = new FastReader();
         int testClass = fastReader.nextInt();

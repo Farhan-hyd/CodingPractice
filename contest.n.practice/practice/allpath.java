@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class allpath{
-	private static void printMatrix(int mat[][], int m, int n,
-									int i, int j, int path[], int idx){
+	private static void printMatrix(int[][] mat, int m, int n,
+                                    int i, int j, int[] path, int idx){
 		path[idx] = mat[i][j];
 		if (i == m - 1){
 			for (int k = j + 1; k < n; k++){

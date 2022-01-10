@@ -45,7 +45,7 @@ public class similartozoo {
     }
 }
 
-public static void main(String args[] ) throws Exception {
+public static void main(String[] args) throws Exception {
 try{
     String str = (new FastReader()).nextLine();
     int x = str.indexOf('o');

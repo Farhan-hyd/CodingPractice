@@ -73,7 +73,7 @@ public class TOTCRT {
                     }
 
                     int idx = 0;
-                    int res[] = new int[m.size()];
+                    int[] res = new int[m.size()];
                     for (Map.Entry<String,Integer> e : m.entrySet()) {
                         res[idx++] = e.getValue();
                     }
