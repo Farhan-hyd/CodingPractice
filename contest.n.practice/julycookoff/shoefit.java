@@ -52,7 +52,7 @@ public class shoefit {
                 int testcase = sc.nextInt();
 
                 while (testcase-- > 0) {
-                    int a[] = new int[3];
+                    int[] a = new int[3];
 
                     int one =0 ;
                     int zero =0 ;

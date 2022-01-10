@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class arrayj {
 
-    public static int Max(int a[], int low, int high) {
+    public static int Max(int[] a, int low, int high) {
 
         if (low == high) {
             return a[low];
@@ -28,10 +28,10 @@ public class arrayj {
         
         int[] arr = new int[size];
 
-        String str[] = br.readLine().split(" ");
+        String[] str = br.readLine().split(" ");
 
         for (int i = 0; i < str.length; i++) {
-            arr[i] = Integer.parseInt(str[i]);;
+            arr[i] = Integer.parseInt(str[i]);
         }
 
         int max = Max(arr, 0, size-1);

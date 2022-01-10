@@ -3,13 +3,13 @@ import java.net.*;
 import java.util.*;
 
 public class UDP {
-  public static void main(String args[]) throws IOException {
+  public static void main(String[] args) throws IOException {
     Scanner sc = new Scanner(System.in);
 
     DatagramSocket ds = new DatagramSocket();
 
     InetAddress ip = InetAddress.getLocalHost();
-    byte buf[] = null;
+    byte[] buf = null;
 
     while (true) {
       String inp = sc.nextLine();

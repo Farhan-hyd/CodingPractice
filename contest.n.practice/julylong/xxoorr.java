@@ -54,7 +54,7 @@ public class xxoorr {
                 int n = sc.nextInt();
                 int m = sc.nextInt();
 
-                int arr[] = new int[n];
+                int[] arr = new int[n];
 
                 long sum = 0;
                 int ans = 0;

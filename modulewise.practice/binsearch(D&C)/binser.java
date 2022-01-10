@@ -1,12 +1,12 @@
 public class binser {
 
     public static void main(String[] args) {
-        int a[] = { 1, 2, 3, 4, 5 };
+        int[] a = { 1, 2, 3, 4, 5 };
         int n = 5;
         System.out.println(binarysearch(a, 0, n - 1, 6));
     }
 
-    public static int binarysearch(int a[], int l, int h, int key) {
+    public static int binarysearch(int[] a, int l, int h, int key) {
 
         int mid = (l + h) / 2;
 

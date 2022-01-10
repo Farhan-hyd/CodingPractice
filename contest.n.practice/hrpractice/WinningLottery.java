@@ -33,7 +33,7 @@ class Result {
     }
 
     public static int getBin(String ticket){
-      StringBuilder binaryRepresentation = new StringBuilder("");
+      StringBuilder binaryRepresentation = new StringBuilder();
           for (int i = 0; i < 10; i++) {
             if (ticket.contains(""+i)) {
               binaryRepresentation.append('1');

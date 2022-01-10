@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class PointLocator {
-  private static Scanner scan= new Scanner(System.in);
+  private static final Scanner scan= new Scanner(System.in);
 
   public static void main(String[] args) {
     Triangle triangle = getTriangle(args);
@@ -40,8 +40,8 @@ public class PointLocator {
   }
 
   private static class Point {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y){
       this.x = x;
@@ -58,9 +58,9 @@ public class PointLocator {
   }
 
   private static class Triangle {
-    private Point  firstVertex;
-    private Point  secondVertex;
-    private Point  thirdVertex;
+    private final Point  firstVertex;
+    private final Point  secondVertex;
+    private final Point  thirdVertex;
 
     public Triangle(Point firstVertex, Point secondVertex, Point thirdVertex){
       this.firstVertex  = firstVertex;
