@@ -54,7 +54,7 @@ public class smtkeypadone {
         FastReader sc = new FastReader();
 
         String s = sc.next();
-        int num[] = new int[s.length()];
+        int[] num = new int[s.length()];
 
         for (int i = 0; i < s.length(); i++) {
             num[i] = (int)s.charAt(i) - (int)'0';

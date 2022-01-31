@@ -60,7 +60,7 @@ public class uniqueno3 {
 
     }
 
-    public static int Uniqueno(int a[]){
+    public static int Uniqueno(int[] a){
         int ones = 0, twos = 0 ,n = a.length;
         int mask;
  

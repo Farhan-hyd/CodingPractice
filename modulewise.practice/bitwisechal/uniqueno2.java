@@ -62,7 +62,7 @@ public class uniqueno2 {
 
     }
 
-    public static ArrayList<Integer> Uniquenos(int a[]){
+    public static ArrayList<Integer> Uniquenos(int[] a){
         int AxorB = 0;
 
         for (int i = 0; i < a.length; i++) {
@@ -93,7 +93,7 @@ public class uniqueno2 {
         return (int)(Math.log(n) / Math.log(2)) + 1;
     }
 
-    public static int firuniqueno(int a[], int i) {
+    public static int firuniqueno(int[] a, int i) {
         ArrayList<Integer> al = new ArrayList<>();
         int ans = 0;
 

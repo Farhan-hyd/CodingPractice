@@ -1,8 +1,7 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
-public class riffles {
-
+public class cryclor {
   static class FastReader {
     BufferedReader br;
     StringTokenizer st;
@@ -51,51 +50,29 @@ public class riffles {
 
       int testcase = sc.nextInt();
       while (testcase-- != 0) {
-        Long n = sc.nextLong();
-        Long k = sc.nextLong();
-        if (n < 4) {
-          System.out.println("1 2");
-          continue;
+        int n = sc.nextInt();
+        int[] boxOne = new int[3];
+        int[] boxTwo = new int[3];
+        int[] boxThree = new int[3];
+        for (int i = 0; i < 3; i++) {
+          boxOne[i] = sc.nextInt();
         }
-        long temp;
-        long c = 1;
-        long a = (n / 2) + 1;
-
-        while (a != 2) {
-          if (a % 2 == 1) 
-            a = a / 2 + 1;
-          else 
-            a = n / 2 + a / 2;
-          c++;
+        for (int i = 0; i < 3; i++) {
+          boxTwo[i] = sc.nextInt();
         }
-
-        k = k % c;
-        long k2 = 1;
-
-        for (long i = 1; i <= k; i++) {
-          k2 <<= 1;
-          k2 %= (n - 1);
+        for (int i = 0; i < 3; i++) {
+          boxThree[i] = sc.nextInt();
         }
-
-        for (long i = 0; i < n / 2; i++) {
-          temp = ((k2 * i) % (n - 1) + 1) % (n - 1);
-          if (temp == 0) 
-            System.out.print(n - 1 + " "); 
-          else 
-            System.out.print(temp + " ");
-        }
-
-        for (long i = -(n / 2) + 1; i < 0; i++) {
-          temp = ((k2 * i) % (n - 1) + n) % (n - 1);
-          if (temp == 0) 
-            System.out.print(n - 1 + " ");
-          else 
-            System.out.print(temp + " ");
-        }
-        System.out.println(n);
+        if (boxOne[0] == n && boxTwo[1] == n && boxThree[2] == n) {
+          System.out.println(0);
+        } 
+        int swap1 = boxOne[1] + boxOne[2] + boxTwo[2];
+        int swap2 = boxTwo[0] + boxThree[0] + boxThree[1];
+        int maxSwap = Math.max(swap1, swap2);
+        System.out.println(maxSwap);
       }
     } catch (Exception e) {
       return;
-    }
-  }
+    } 
+  } 
 }

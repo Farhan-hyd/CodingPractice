@@ -6,7 +6,7 @@ public class bubblesort {
         Scanner sc= new Scanner(System.in);
 
         int n = sc.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < a.length; i++) {
             a[i] = sc.nextInt();
         }
@@ -17,7 +17,7 @@ public class bubblesort {
         sc.close();
     }
 
-    public static int[] Bubblesort(int arr[],int n) {
+    public static int[] Bubblesort(int[] arr, int n) {
         if(n == 1){
             return arr;
           }
@@ -32,7 +32,7 @@ public class bubblesort {
 
     }
 
-    public static int[] swap(int a[],int x,int y) {
+    public static int[] swap(int[] a, int x, int y) {
         a[x] = a[x] ^ a[y];
         a[y] = a[x] ^ a[y];
         a[x] = a[x] ^ a[y];

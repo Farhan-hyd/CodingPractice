@@ -1,8 +1,8 @@
 public class phonekeypad {
 
-    public static String keypad[] = { " ", ".+@$", "abc", "def", "ghi", "jkl" , "mno", "pqrs" , "tuv", "wxyz" };
+    public static String[] keypad = { " ", ".+@$", "abc", "def", "ghi", "jkl" , "mno", "pqrs" , "tuv", "wxyz" };
 
-    public static void genratename(char in[],char out[],int i,int j) {
+    public static void genratename(char[] in, char[] out, int i, int j) {
         if (in[i] == '\0') {
             out[j] = '\0';
             for (char c : out) {
@@ -27,9 +27,9 @@ public class phonekeypad {
     }
 
     public static void main(String[] args) {
-        char in[] = {'1','2', '\0', '\0', '\0', '\0', '\0', '\0'};
+        char[] in = {'1','2', '\0', '\0', '\0', '\0', '\0', '\0'};
 
-        char out[] = new char[100];
+        char[] out = new char[100];
         genratename(in, out, 0, 0);
     }
 }

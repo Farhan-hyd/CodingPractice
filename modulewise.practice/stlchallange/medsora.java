@@ -2,8 +2,8 @@ import java.util.*;
 
 public class medsora {
 
-    public static int[] Merge(int a1[], int a2[], int n) {
-        int a[] = new int[2*n];
+    public static int[] Merge(int[] a1, int[] a2, int n) {
+        int[] a = new int[2*n];
         int id=0,i=0,j=0;
         int as = (2*n)-1;
 
@@ -48,8 +48,8 @@ public class medsora {
         if(sc.hasNextInt())
          size=sc.nextInt();
         
-        int a1[] = new int[size];
-        int a2[] = new int[size];
+        int[] a1 = new int[size];
+        int[] a2 = new int[size];
 
         for (int i = 0; i < a1.length; i++) {
             a1[i] = sc.nextInt();
@@ -59,7 +59,7 @@ public class medsora {
             a2[i] = sc.nextInt();
         }
 
-        int a[] = new int[2*size];
+        int[] a = new int[2*size];
         a = Merge(a1,a2,size);
 
         for (int i : a) {

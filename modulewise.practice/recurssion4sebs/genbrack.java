@@ -52,7 +52,7 @@ public class genbrack {
         printParenthesis(str, n);
     }
 
-    static void _printParenthesis(char str[], int pos, int n, int open, int close) {
+    static void _printParenthesis(char[] str, int pos, int n, int open, int close) {
         if (close == n) {
             for (int i = 0; i < str.length; i++)
                 System.out.print(str[i]);
@@ -70,7 +70,7 @@ public class genbrack {
         }
     }
 
-    static void printParenthesis(char str[], int n) {
+    static void printParenthesis(char[] str, int n) {
         if (n > 0)
             _printParenthesis(str, 0, n, 0, 0);
         return;

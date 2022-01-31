@@ -2,7 +2,7 @@ public class ratmaze {
 
     static int N;
 
-    void printSolution(int sol[][]) {
+    void printSolution(int[][] sol) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++)
                 System.out.print(" " + sol[i][j] + " ");
@@ -10,12 +10,12 @@ public class ratmaze {
         }
     }
 
-    boolean isSafe(int maze[][], int x, int y) {
+    boolean isSafe(int[][] maze, int x, int y) {
         return (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1);
     }
 
-    boolean solveMaze(int maze[][]) {
-        int sol[][] = new int[N][N];
+    boolean solveMaze(int[][] maze) {
+        int[][] sol = new int[N][N];
 
         if (solveMazeUtil(maze, 0, 0, sol) == false) {
             System.out.print("Solution doesn't exist");
@@ -26,7 +26,7 @@ public class ratmaze {
         return true;
     }
 
-    boolean solveMazeUtil(int maze[][], int x, int y, int sol[][]) {
+    boolean solveMazeUtil(int[][] maze, int x, int y, int[][] sol) {
         if (x == N - 1 && y == N - 1 && maze[x][y] == 1) {
             sol[x][y] = 1;
             return true;
@@ -57,10 +57,10 @@ public class ratmaze {
         return false;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ratmaze rat = new ratmaze();
         //1 for clear ath 0 for obstacle
-        int maze[][] = { { 1, 0, 1, 1, 0 }, { 1, 1, 1, 0, 0 }, { 1, 1, 0, 1, 0 }, { 0, 1, 1, 1, 0 }, { 0, 0, 1, 1, 0 }};
+        int[][] maze = { { 1, 0, 1, 1, 0 }, { 1, 1, 1, 0, 0 }, { 1, 1, 0, 1, 0 }, { 0, 1, 1, 1, 0 }, { 0, 0, 1, 1, 0 }};
 
         N = maze.length;
         rat.solveMaze(maze);

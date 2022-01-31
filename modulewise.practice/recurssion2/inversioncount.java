@@ -6,7 +6,7 @@ public class inversioncount {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
@@ -16,7 +16,7 @@ public class inversioncount {
         sc.close();
     }
 
-    public static int invcnt(int a[],int s,int e) {
+    public static int invcnt(int[] a, int s, int e) {
         if(s>=e) return 0;
         int mid =(s+e)/2;
         int x = invcnt(a, s, mid);
@@ -26,13 +26,13 @@ public class inversioncount {
         return x+y+z;
     }
 
-    public static int merge(int a[],int s,int e) {
+    public static int merge(int[] a, int s, int e) {
         int mid = (s+e)/2;
         int i = s;
         int j = mid+1;
         int k = s;
 
-        int temp[] = new int[100];
+        int[] temp = new int[100];
         int inv = 0;
 
         while (i <= mid && j <= e) {

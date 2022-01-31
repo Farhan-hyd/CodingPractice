@@ -1,4 +1,4 @@
-package linkedlist;
+package collectionframework.linkedlist;
 
 public class myll<E> {
     

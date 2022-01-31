@@ -31,20 +31,6 @@ public class gcdandlcm {
         long nextLong() {
             return Long.parseLong(next());
         }
-
-        double nextDouble() {
-            return Double.parseDouble(next());
-        }
-
-        String nextLine() {
-            String str = "";
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -58,8 +44,7 @@ public class gcdandlcm {
 
                 Long gcd = gcd(num1, num2);
                 Long lcm = lcm(num1, num2, gcd);
-
-                System.out.println(gcd+" "+lcm);
+                System.out.println(gcd + " " + lcm);
             }
             
         } catch (Exception e) {

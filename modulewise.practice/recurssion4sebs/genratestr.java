@@ -1,17 +1,17 @@
 public class genratestr {
     
     public static void main(String[] args) {
-        char a[] = new char[100];
+        char[] a = new char[100];
         for (int i = 1; i < 5; i++) {
             a[i] = (""+i).toCharArray()[0];
         }
-        char out[] = new char[100];
+        char[] out = new char[100];
 
         genstr(a, out, 0, 0);
 
     }
 
-    public static void genstr(char in[],char out[], int i,int j) {
+    public static void genstr(char[] in, char[] out, int i, int j) {
         if(in[i] == '\0'){
             out[j] = '\0';
             for (char c : out) {

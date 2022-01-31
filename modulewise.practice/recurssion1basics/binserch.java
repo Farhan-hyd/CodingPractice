@@ -49,7 +49,7 @@ public class binserch {
             FastReader sc = new FastReader();
 
             int n = sc.nextInt();
-            int a[] = new int[n];
+            int[] a = new int[n];
 
             for (int i = 0; i < a.length; i++) {
                 a[i] = sc.nextInt();
@@ -60,7 +60,7 @@ public class binserch {
             System.out.println(Binarysearch(a,0,n-1,key));
         }
 
-        public static int Binarysearch(int a[],int l,int h, int key) {
+        public static int Binarysearch(int[] a, int l, int h, int key) {
             int mid = (l+h)/2;
             int index = -1;
             if (a[mid] == key) {

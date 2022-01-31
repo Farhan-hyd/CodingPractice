@@ -18,7 +18,7 @@ public class firstoccurance {
         sc.close();
     }
 
-    public static int firstocc(int a[], int i, int key) {
+    public static int firstocc(int[] a, int i, int key) {
         if (i == a.length) {
             return -1;
         }
@@ -28,7 +28,7 @@ public class firstoccurance {
         return firstocc(a, i + 1, key);
     }
 
-    public static int lastocc(int a[], int i, int key) {
+    public static int lastocc(int[] a, int i, int key) {
         if (i == -1) {
             return -1;
         }

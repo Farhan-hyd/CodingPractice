@@ -1,14 +1,14 @@
 public class zerooneknapsack {
 
     public static void main(String[] args) {
-        int wt[] = { 1, 2, 3, 5 };
-        int price[] = { 40, 20, 30, 100 };
+        int[] wt = { 1, 2, 3, 5 };
+        int[] price = { 40, 20, 30, 100 };
         int n = 4;
         int c = 7;
         System.out.println(profit(n, c, wt, price));
     }
 
-    public static int profit(int n, int c, int wt[], int price[]) {
+    public static int profit(int n, int c, int[] wt, int[] price) {
 
         if (n == 0 || c == 0) {
             return 0;

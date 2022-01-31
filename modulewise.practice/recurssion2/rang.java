@@ -17,7 +17,7 @@ public class rang {
          
     }
 
-    public static int firstocc(int a[], int i, int key) {
+    public static int firstocc(int[] a, int i, int key) {
         if (i == a.length) {
             return -1;
         }
@@ -27,7 +27,7 @@ public class rang {
         return firstocc(a, i + 1, key);
     }
 
-    public static int lastocc(int a[], int i, int key) {
+    public static int lastocc(int[] a, int i, int key) {
         if (i == -1) {
             return -1;
         }
@@ -37,7 +37,7 @@ public class rang {
         return lastocc(a, i - 1, key);
     }
 
-    public static void range(int a[],int key) {
+    public static void range(int[] a, int key) {
         int fir = firstocc(a, 0, key);
         if (fir == -1) {
             System.out.println(key+" is not presnt");

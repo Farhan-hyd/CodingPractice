@@ -1,11 +1,11 @@
 public class MergeSort{
     
-    void merge(int arr[], int l, int m, int r){
+    void merge(int[] arr, int l, int m, int r){
         int n1 = m - l + 1;
         int n2 = r - m;
  
-        int L[] = new int[n1];
-        int R[] = new int[n2];
+        int[] L = new int[n1];
+        int[] R = new int[n2];
  
         for (int i = 0; i < n1; ++i)
             L[i] = arr[l + i];
@@ -40,7 +40,7 @@ public class MergeSort{
         }
     }
  
-    void sort(int arr[], int l, int r){
+    void sort(int[] arr, int l, int r){
         if (l < r) {
             int m =l+ (r-l)/2;
  
@@ -51,15 +51,15 @@ public class MergeSort{
         }
     }
  
-    static void printArray(int arr[]){
+    static void printArray(int[] arr){
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
         System.out.println();
     }
  
-    public static void main(String args[]){
-        int arr[] = { 12, 11, 13, 5, 6, 7 };
+    public static void main(String[] args){
+        int[] arr = { 12, 11, 13, 5, 6, 7 };
  
         System.out.println("Given Array");
         printArray(arr);

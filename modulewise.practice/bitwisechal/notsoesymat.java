@@ -61,7 +61,7 @@ public class notsoesymat {
         }
     }
 
-    public static int nodivbyprime(int a[], int las) {
+    public static int nodivbyprime(int[] a, int las) {
 
         int n = a.length;
         int result = 0;
@@ -89,7 +89,7 @@ public class notsoesymat {
 
     }
 
-    public static ArrayList<Integer> filter(int a[], int n) {
+    public static ArrayList<Integer> filter(int[] a, int n) {
         int j = 0;
 
         ArrayList<Integer> al = new ArrayList<>();
