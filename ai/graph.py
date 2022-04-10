@@ -44,6 +44,23 @@ class Graph():
         print()
         return visited[to_node]
 
+    def depth_limited_search(self, from_node, to_node, limit):
+        print("depth limited search: ")
+        visited = {from_node: 0}
+        stack = [from_node]
+        while stack:
+          current_node = stack.pop()
+          print (current_node, end = " ") 
+          for neighbor in self.edges[current_node]:
+            if neighbor not in visited:
+                visited[neighbor] = visited[current_node] + \
+                    self.distances[(current_node, neighbor)]
+                stack.append(neighbor)
+                if visited[neighbor] > limit:
+                    return visited[to_node]
+        print()
+        return visited[to_node]    
+
 class HeuristicGraph:
     def __init__(self, adjacency_list):
         self.adjacency_list = adjacency_list

@@ -36,7 +36,6 @@ def main():
     print("bfs weight : "+str(graph.bfs(source, destination)))
     print("dfs weight : "+str(graph.dfs(source, destination)))
     
-    
     heuristic_graph = create_heuristic_graph()
     heuristic_graph.a_star_algorithm('A','D')
 
