@@ -26,3 +26,7 @@
 # intellij
 /.idea/
 *.iml
+
+#python
+ai/__pycache__
+*.pyc

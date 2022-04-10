@@ -2,12 +2,10 @@ public class countsetbit {
 
     public static int countSetbitm1(int n) {
         int setbit = 0;
-
         while (n>0) {
             setbit += (n&1);
             n = n>>1;
         }
-
         return setbit;
     }
 
