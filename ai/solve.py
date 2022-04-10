@@ -20,6 +20,15 @@ def create_graph():
     print(graph.edges)
     return graph
 
+def create_heuristic_graph():
+    adjacency_list = {
+    'A': [('B', 1), ('C', 3), ('D', 7)],
+    'B': [('D', 5)],
+    'C': [('D', 12)]
+    }
+    heuristic_graph = HeuristicGraph(adjacency_list)
+    return heuristic_graph    
+
 def main():
     graph = create_graph()
     source = int(input("source: "))
@@ -27,12 +36,8 @@ def main():
     print("bfs weight : "+str(graph.bfs(source, destination)))
     print("dfs weight : "+str(graph.dfs(source, destination)))
     
-    adjacency_list = {
-    'A': [('B', 1), ('C', 3), ('D', 7)],
-    'B': [('D', 5)],
-    'C': [('D', 12)]
-    }
-    heuristic_graph = HeuristicGraph(adjacency_list)
+    
+    heuristic_graph = create_heuristic_graph()
     heuristic_graph.a_star_algorithm('A','D')
 
 main()
