@@ -60,7 +60,7 @@ public class uniqueno1 {
         System.out.println(Uniqueno(a));
     }
 
-    public static int Uniqueno(int a[]){
+    public static int Uniqueno(int[] a){
         int ans = 0;
 
         for (int i = 0; i < a.length; i++) {

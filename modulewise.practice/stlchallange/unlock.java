@@ -53,7 +53,7 @@ class Solution {
         }
     }
 
-    public static void findMaximumNum(char ar[], int k, Res r) {
+    public static void findMaximumNum(char[] ar, int k, Res r) {
         if (k == 0)
             return;
         int n = ar.length;

@@ -79,14 +79,18 @@ public class riffles {
 
         for (long i = 0; i < n / 2; i++) {
           temp = ((k2 * i) % (n - 1) + 1) % (n - 1);
-          if (temp == 0) System.out.print(n - 1 + " "); 
-          else System.out.print(temp + " ");
+          if (temp == 0) 
+            System.out.print(n - 1 + " "); 
+          else 
+            System.out.print(temp + " ");
         }
 
         for (long i = -(n / 2) + 1; i < 0; i++) {
           temp = ((k2 * i) % (n - 1) + n) % (n - 1);
-          if (temp == 0) System.out.print(n - 1 + " ");
-          else System.out.print(temp + " ");
+          if (temp == 0) 
+            System.out.print(n - 1 + " ");
+          else 
+            System.out.print(temp + " ");
         }
         System.out.println(n);
       }

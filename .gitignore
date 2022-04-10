@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+/out/*
 *.jar
 *.war
 *.nar
@@ -25,3 +26,7 @@
 # intellij
 /.idea/
 *.iml
+
+#python
+ai/__pycache__
+*.pyc

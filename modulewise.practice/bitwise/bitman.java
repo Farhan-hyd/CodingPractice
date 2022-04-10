@@ -1,10 +1,7 @@
 public class bitman {
 
     static boolean isEven(int n){
-        if ((n & 1) == 1) {
-            return false;
-        }
-        return true;
+        return (n & 1) != 1;
     }
 
     static int getBit(int n,int i){

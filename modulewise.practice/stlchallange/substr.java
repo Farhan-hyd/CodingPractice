@@ -12,8 +12,8 @@ class substr {
             return "";
         }
 
-        int hash_pat[] = new int[no_of_chars];
-        int hash_str[] = new int[no_of_chars];
+        int[] hash_pat = new int[no_of_chars];
+        int[] hash_str = new int[no_of_chars];
 
         for (int i = 0; i < len2; i++)
             hash_pat[pat.charAt(i)]++;

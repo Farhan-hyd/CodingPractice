@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class replacepi {
     
-    public static void replpi(char a[],int i) {
+    public static void replpi(char[] a, int i) {
         if (a[i] == '\0' || a[i+1] == '\0') {
             return;
         }
@@ -29,7 +29,7 @@ public class replacepi {
     }
 
     public static void main(String[] args) {
-        char a[] = new char[25];
+        char[] a = new char[25];
 
         Scanner sc = new Scanner(System.in);
 

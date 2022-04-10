@@ -1,6 +1,6 @@
 public class genratesubseq {
 
-    public static void filter(char a[], int n) {
+    public static void filter(char[] a, int n) {
 
         int j = 0;
 
@@ -19,7 +19,7 @@ public class genratesubseq {
 
     }
 
-    public static void printsubset(char a[]) {
+    public static void printsubset(char[] a) {
 
         int n = a.length;
 

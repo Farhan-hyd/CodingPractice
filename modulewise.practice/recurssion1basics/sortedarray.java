@@ -49,7 +49,7 @@ public class sortedarray {
             FastReader sc = new FastReader();
 
             int n = sc.nextInt();
-            int a[] = new int[n];
+            int[] a = new int[n];
 
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
@@ -58,10 +58,10 @@ public class sortedarray {
             System.out.println(sorted(a,0));
         }
 
-        public static boolean sorted(int a[],int index) {
+        public static boolean sorted(int[] a, int index) {
             if (index == a.length-1) {
                 return true;
             }
-            return (a[index] <= a[index+1] ? true : false) && sorted(a, index+1);
+            return (a[index] <= a[index + 1]) && sorted(a, index+1);
         }
 }

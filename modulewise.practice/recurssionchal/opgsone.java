@@ -49,7 +49,7 @@ public class opgsone {
         FastReader sc = new FastReader();
 
         int n = sc.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
 
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
@@ -59,8 +59,8 @@ public class opgsone {
 
     }
 
-    public static int optimalStrategyOfGame(int a[], int n) {
-        int table[][] = new int[n][n];
+    public static int optimalStrategyOfGame(int[] a, int n) {
+        int[][] table = new int[n][n];
         int gap, i, j, x, y, z;
         
         for (gap = 0; gap < n; ++gap) {

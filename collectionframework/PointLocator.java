@@ -1,3 +1,5 @@
+package collectionframework;
+
 import java.util.Scanner;
 
 public class PointLocator {

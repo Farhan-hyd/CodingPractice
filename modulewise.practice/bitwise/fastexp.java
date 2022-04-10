@@ -5,11 +5,9 @@ public class fastexp {
 
         while (n > 0) {
             int lastBit = (n & 1);
-            
             if (lastBit == 1) {
                 ans *= a;
             }
-            
             a *= a;
             n = n >> 1;
         }

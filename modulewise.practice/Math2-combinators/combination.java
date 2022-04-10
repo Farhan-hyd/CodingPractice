@@ -5,10 +5,10 @@ public class combination {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long n = sc.nextInt();
-        // long k = sc.nextInt();
+        long k = sc.nextInt();
 
-        // System.out.println(combi(n, k));
-        System.out.println(catalan(n));
+        System.out.println(combi(n, k));
+        // System.out.println(catalan(n));
 
         sc.close();
     }
@@ -31,4 +31,18 @@ public class combination {
     public static long catalan(Long n) {
         return combi(2 * n, n) / (n + 1);
     }
+
+    static int nCr(int n, int r){
+        return fact(n) / (fact(r) *
+                  fact(n - r));
+    }
+
+    static int fact(int n){
+        int res = 1;
+        for(int i = 1; i <= n; i++){
+            res *= i;
+        }
+        return res;
+    }
+
 }
