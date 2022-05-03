@@ -7,7 +7,7 @@
 4. what is pass1 pass2 assembler?
 5. what are macros?
 
-- ## genral ques
+- ## general ques
 1. application software vs system software
 2. different types of assembler
 3. macro expantion, recursive macro
