@@ -9,14 +9,21 @@
 
 %%
 line : exp {
-    printf("\nResult = %f\n", $$);
-    return 0;
-}
+        printf("\nResult = %f\n", $$);
+        return 0;
+    }
 exp:number {$$=$1;}
 |exp'+'number {$$=$1+$3;}
 |exp'-'number {$$=$1-$3;}
 |exp'*'number {$$=$1*$3;}
-|exp'/'number {$$=$1/$3;}
+|exp'/'number {
+    if($3 == 0) {
+        printf("cannot divide by 0\n");
+        yyerror();
+    }else {
+        $$=$1/$3;
+        }
+    }
 |cos1 number {$$ = cos(($2/180)*3.14);}
 |sin1 number {$$ = sin(($2/180)*3.14);}
 |tan1 number {$$ = tan(($2/180)*3.14);};

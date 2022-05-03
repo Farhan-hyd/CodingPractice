@@ -1,0 +1,42 @@
+identifiers.lex ->
+START
+    INITIALIZE enum{LOOKUP = 0,INT,FLOAT,DOUBLE,DEF}
+    INITIALIZE state
+    INITIALIZE add_count -> 1000
+    IF token=='\n'
+        state = LOOKUP
+    IF token=='('
+        state = LOOKUP
+    IF token[0]==int
+        state = INT
+    IF token[0]==float
+        state = FLOAT
+    IF token[0]==double
+        state = DOUBLE
+    IF token[0]==def
+        state = DEF
+    IF token='Numeric'+'AlphaNumeric' || token=='.'
+        PASS
+    //not completed
+END
+
+output ->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/identifiers$ ./a.out
+int a,b;
+float c;
+double sum;
+sum= a+b+c;
+end
+<--------------------Symbol Table-------------------->
+Identifier              Address         Type
+sum                     1016            Double
+c                       1012            Float
+b                       1008            Integer
+a                       1004            Integer
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/identifiers$ ./a.out
+int a,b;
+end
+<--------------------Symbol Table-------------------->
+Identifier              Address         Type
+b                       1008            Integer
+a                       1004            Integer

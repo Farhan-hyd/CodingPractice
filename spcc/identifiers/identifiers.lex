@@ -29,6 +29,7 @@ end return 0;
 %%
 
 int yywrap(){}
+
 struct word *word_list;
 struct word {
     char *word_name;

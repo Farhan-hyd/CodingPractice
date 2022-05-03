@@ -1,0 +1,51 @@
+arth.y->
+START
+    PRINT Enter the expression:
+    INITIALIZE valid -> 1
+    PRE-PROCESSING
+        GET-TOKENS num id op
+    END PRE-PROCESSING
+    call yyparse()
+    IF token==
+        [start -> id '=' s ';'] ||
+        [s -> id x|num x|'-' num x|'(' s ')' x] ||
+        [x -> op s|'-'s]
+    END yyparse()
+    IF valid == 0
+        PRINT Invalid
+    ELSE
+        PRINT Valid
+END
+
+arth.lex ->
+START
+    CALL yylex()
+    IF token==AlphaNumeric
+        EXPORT AlphaNumeric AS id
+    IF token==Numeric
+        EXPORT Numeric AS num
+    IF token==Operator
+        EXPORT Operator AS op
+    END yylex()
+END
+
+output ->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/ValidArith$ ./a.out
+
+Enter the expression:
+a=b;
+
+Valid expression!
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/ValidArith$ ./a.out
+
+Enter the expression:
+a=b+(c*d);
+
+Valid expression!
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/ValidArith$ ./a.out
+
+Enter the expression:
+a
+
+Invalid expression!
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/ValidArith$ 

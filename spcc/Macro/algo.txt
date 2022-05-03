@@ -1,0 +1,27 @@
+output->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/Macro$ python3 macro* 
+MDT
+Index    Contents
+0        MEND 
+1        ADDS #1 #2 #3 
+2        ADD1 #1 
+3        ADD1 #2 
+4        ADD1 #3 
+4        MEND 
+
+MNT
+Index    Argument
+1                        0
+2        ADDS            1
+ALA
+Index    Argument
+1        DATA1b
+2        DATA1bb
+3        DATA1bbb
+4        DATA2b
+5        DATA2bb
+6        DATA2bbb
+7        DATA3b
+8        DATA3bb
+9        DATA3bbb
+10       DATA1bbb

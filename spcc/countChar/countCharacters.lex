@@ -17,6 +17,7 @@ end return 0;
 %%
 
 int yywrap(){}
+
 int main(int argc, char **argv){
 yylex();
 printf("Count of characters = %d \nCount of words = %d \nCount of sentences = %d \nCount of lines= %d \nCount of uppercase letters = %d \nCount of lowercase letters =%d \nCount of tabs = %d \nCount of numbers = %d \n",no_of_chars, no_of_words, no_of_sent,no_of_lines,no_of_uppercase,no_of_lowercase, no_of_tabs, no_of_num);

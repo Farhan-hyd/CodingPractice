@@ -1,0 +1,45 @@
+START
+    INITIALIZE count=0
+    CALL yylex()
+    IF token==CapitalAlphabet
+        PRINT CapitalAlphabet
+        count++
+    IF token==AlphaNumeric
+        PRINT AlphaNumeric
+    IF token==' ' && token=='\t'
+        PASS
+    IF token='\n'
+        RETURN
+    END yylex()
+    PRINT count
+END
+
+output->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/Case$ ./a.out
+OK coding
+O capital letter
+K capital letter
+c not a capital letter
+o not a capital letter
+d not a capital letter
+i not a capital letter
+n not a capital letter
+g not a capital letter
+No of capital letters in given input is 2
+
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/Case$ ./a.out
+Farhan 1019128
+F capital letter
+a not a capital letter
+r not a capital letter
+h not a capital letter
+a not a capital letter
+n not a capital letter
+1 not a capital letter
+0 not a capital letter
+1 not a capital letter
+9 not a capital letter
+1 not a capital letter
+2 not a capital letter
+8 not a capital letter
+No of capital letters in given input is 1

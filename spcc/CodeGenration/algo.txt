@@ -1,0 +1,7 @@
+output ->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/CodeGenration$ ./a.out
+a=b+c*d
+
+t0=c*d
+t1=b+t0
+a=t1

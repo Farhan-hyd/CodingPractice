@@ -1,0 +1,68 @@
+cal.y->
+START
+    PRE-PROCESSING
+        SET-TYPE num -> double
+        GET-TOKENS sin1 cos1 tan1 number AS<num>
+        SET-TYPE line exp AS<num>
+    END PRE-PROCESSING
+    call yyparse()
+    IF token==line || token == exp
+        PRINT Result
+    IF token==number
+        Result=number
+    IF token=="exp+number"
+        Result=token[1]+token[3]
+    IF token=="exp-number"
+        Result=token[1]-token[3]
+    IF token=="exp*number"
+        Result=token[1]*token[3]
+    IF token=="exp/number"
+        IF token[3] == 0
+            call yyerror()
+        ELSE
+            Result=token[1]/token[3]
+    IF token == "cos1 number"
+        Result=cos(number)
+    IF token == "sin1 number"
+        Result=sin(number)
+    IF token == "tan1 number"
+        Result=tan(number)
+    END yyparse()
+END
+
+cal.l ->
+START
+    CALL yylex()
+    IF token==Numeric
+        SET num = Numeric
+        EXPORT Numeric AS number
+    IF token==Operator
+        EXPORT Operator AS operator
+    IF token==COS || token==cos
+        EXPORT COS,cos AS cos1
+    IF token==SIN || token==sin
+        EXPORT SIN,sin AS sin1
+    IF token==TAN || token==tan
+        EXPORT TAN,tan AS tan1
+    IF token='\n'
+        RETURN
+    END yylex()
+END
+
+
+output ->
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/SciCal$ ./a.out
+Enter an expression: 3+4
+
+Result = 7.000000
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/SciCal$ ./a.out
+Enter an expression: sin0
+
+Result = 0.000000
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/SciCal$ ./a.out
+Enter an expression: 3/0
+cannot divide by 0
+farhan@pop-os:~/Documents/workspace/CodingPractice/spcc/SciCal$ ./a.out
+Enter an expression: tan30
+
+Result = 0.576996
