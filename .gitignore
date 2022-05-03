@@ -30,3 +30,9 @@
 #python
 ai/__pycache__
 *.pyc
+
+#spcc
+a.out
+lex.yy.c
+y.tab.c 
+y.tab.h

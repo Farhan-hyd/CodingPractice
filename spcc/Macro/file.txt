@@ -1,0 +1,14 @@
+ADD1 &arg 
+L 1 &arg 
+A 1 = F'1' 
+ST 1 &arg 
+MEND 
+  
+MACRO 
+ADDS &arg1 &arg2 &arg3 
+ADD1 &arg1 
+ADD1 &arg2 
+ADD1 &arg3 
+MEND 
+  
+ADDS data1 data2 data3 
