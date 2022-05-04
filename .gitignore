@@ -31,8 +31,15 @@
 ai/__pycache__
 *.pyc
 
+<<<<<<< Updated upstream
 #spcc
 a.out
 lex.yy.c
 y.tab.c 
 y.tab.h
+=======
+# spcc
+*.exe
+*.yy
+*.yy.c
+>>>>>>> Stashed changes

@@ -10,8 +10,6 @@ class Graph():
     def add_edge(self, from_node, to_node, distance):
         self.edges.setdefault(from_node, [])
         self.edges[from_node].append(to_node)
-        self.edges.setdefault(to_node, [])
-        self.edges[to_node].append(from_node)
         self.distances[(from_node, to_node)] = distance
 
     def bfs(self, from_node, to_node):
